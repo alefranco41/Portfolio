@@ -14,7 +14,7 @@ import os
 from pathlib import Path
 import environ
 from django.core.management.utils import get_random_secret_key
-
+import dj_database_url
 
 env = environ.Env(  
     DEBUG=(bool, False),
@@ -88,7 +88,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    'default': env.db()
+    'default': dj_database_url.parse(env('DATABASE_URL'))
 }
 
 
