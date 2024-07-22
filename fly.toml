@@ -1,4 +1,4 @@
-# fly.toml app configuration file generated for alessandro-franceschini on 2024-07-22T11:33:50+02:00
+# fly.toml app configuration file generated for alessandro-franceschini on 2024-07-22T14:36:17+02:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
@@ -27,5 +27,5 @@ console_command = '/code/manage.py shell'
   size = 'shared-cpu-1x'
 
 [[statics]]
-  guest_path = '/code/staticfiles'
+  guest_path = '/code/static'
   url_prefix = '/static/'
